@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.wikiauto'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation("org.seleniumhq.selenium:selenium-java:4.33.0")
+    // https://mvnrepository.com/artifact/org.testng/testng
+    implementation("org.testng:testng:7.11.0")
+}
+
+test {
+    useTestNG(){
+        outputDirectory = file("test-output")
+        useDefaultListeners = true
+        suites 'src/test/resources/testrunner/testng.xml'
+    }
+}

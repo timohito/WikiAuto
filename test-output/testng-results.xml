@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-26T23:07:18 GMT+04:00" name="Wiki Search Test Suite" finished-at="2025-06-26T23:07:22 GMT+04:00" duration-ms="3895">
+    <groups>
+    </groups>
+    <test started-at="2025-06-26T23:07:18 GMT+04:00" name="Search Test" finished-at="2025-06-26T23:07:22 GMT+04:00" duration-ms="3895">
+      <class name="org.wikitests.searchtests.SearchTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@6736fa8d]" started-at="2025-06-26T23:07:18 GMT+04:00" name="setUp" finished-at="2025-06-26T23:07:19 GMT+04:00" duration-ms="781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:org.wikitests.searchtests.SearchTest@6736fa8d]" started-at="2025-06-26T23:07:19 GMT+04:00" name="test" finished-at="2025-06-26T23:07:22 GMT+04:00" duration-ms="3009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@6736fa8d]" started-at="2025-06-26T23:07:22 GMT+04:00" name="tearDown" finished-at="2025-06-26T23:07:22 GMT+04:00" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.wikitests.searchtests.SearchTest -->
+    </test> <!-- Search Test -->
+  </suite> <!-- Wiki Search Test Suite -->
+</testng-results>
