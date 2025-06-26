@@ -1,33 +1,37 @@
 package org.wikitests.searchtests;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.wikiauto.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.wikiauto.DriverFactory;
 
 import java.util.List;
 
 public class SearchTest {
     private BasePage basePage;
-    private WebDriver driver;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
-        driver = new ChromeDriver();
-        basePage = new BasePage(driver);
+        ChromeOptions options = new ChromeOptions();
+        WebDriver localDriver = new ChromeDriver(options);
+        DriverFactory.setDriver(localDriver);
+        basePage = new BasePage(localDriver);
     }
+
 
     @Test
     public void testBoldSuggestions() {
         String query = "Ива";
         basePage.open();
-        basePage.enterQueryInSearchBox(query);
+        basePage.enterQueryInSearchBox(query); // вводим запрос
 
-        List<WebElement> Suggestions = basePage.getSuggestions();
+        List<WebElement> Suggestions = basePage.getSuggestions(); // получаем саджесты
 
-        for (WebElement element : Suggestions) {
+        for (WebElement element : Suggestions) { //для каждого саджеста проверяем содержит ли он подстроку из нашего запроса, выделена ли она жирным
             Assert.assertTrue(element.getText().contains(query));
             String highlightedText = basePage.getHighlightedText(element);
             Assert.assertTrue(highlightedText.toLowerCase().contains(query.toLowerCase()));
@@ -42,7 +46,7 @@ public class SearchTest {
 
         List<WebElement> Suggestions = basePage.getSuggestions();
 
-        for (WebElement element : Suggestions) {
+        for (WebElement element : Suggestions) { //для каждого саджеста проверяем что он не содержит строку и никакая часть саджеста не выделена жирным
             Assert.assertFalse(element.getText().contains(query));
             String highlightedText = basePage.getHighlightedText(element);
             Assert.assertTrue(highlightedText.isEmpty());
@@ -51,13 +55,13 @@ public class SearchTest {
 
     @Test
     public void testNoSuggestionsIfInvalidQuery() {
-        String query = "Ивазаопщазл";
+        String query = "Ивазаопщазл"; //ошибочный запрос
         basePage.open();
         basePage.enterQueryInSearchBox(query);
 
         List<WebElement> Suggestions = basePage.getSuggestions();
 
-        Assert.assertTrue(Suggestions.isEmpty());
+        Assert.assertTrue(Suggestions.isEmpty()); //проверяем что саджестов нет
     }
 
     @Test
@@ -65,9 +69,9 @@ public class SearchTest {
         String query = "Татария";
         basePage.open();
         basePage.enterQueryInSearchBox(query);
-        basePage.getSuggestions().get(0).click();
+        basePage.getSuggestions().get(0).click(); //кликаем по первому саджесту
 
-        Assert.assertTrue(basePage.isCurrentPageMatchingQuery(query));
+        Assert.assertTrue(basePage.isCurrentPageMatchingQuery(query)); //убеждаемся что попали на верную страницу
     }
 
     @Test
@@ -75,19 +79,19 @@ public class SearchTest {
         String query = "Иван";
         basePage.open();
         basePage.enterQueryInSearchBox(query);
-        basePage.clickSearchButton();
+        basePage.clickSearchButton(); //кликаем по кнопке поиска
 
-        Assert.assertTrue(basePage.isCurrentPageMatchingQuery(query));
+        Assert.assertTrue(basePage.isCurrentPageMatchingQuery(query)); //убеждаемся что попали на верную страницу
     }
 
     @Test
     public void testSearchButtonNoSuggestions() {
-        String query = "Иваннннн";
+        String query = "Иваннннн"; //некорректный запрос
         basePage.open();
         basePage.enterQueryInSearchBox(query);
-        basePage.clickSearchButton();
+        basePage.clickSearchButton(); //клик на кнопку поиска
 
-        Assert.assertTrue(basePage.isCurrentPageASearchResultPage());
+        Assert.assertTrue(basePage.isCurrentPageASearchResultPage()); //убеждаемся что попали на страницу поиска
     }
 
     @Test
@@ -98,9 +102,9 @@ public class SearchTest {
         Assert.assertTrue(basePage.searchPagesContainingTipExistsAndFunctions());// есть подсказка и функционирует
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown() {
-        driver.quit();
+        DriverFactory.quitDriver();
     }
 }
 

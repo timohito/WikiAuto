@@ -2,19 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="4" parallel="methods" name="Failed suite [Wiki Search Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="4" parallel="methods" name="Search Test(failed)" verbose="0">
-    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="org.wikitests.searchtests.SearchTest">
         <methods>
-          <include name="searchTest1"/>
           <include name="tearDown"/>
+          <include name="testNoSuggestionsIfInvalidQuery"/>
+          <include name="testBoldSuggestions"/>
           <include name="setUp"/>
-          <include name="searchTest12"/>
-          <include name="searchTest4"/>
-          <include name="searchTest3"/>
-          <include name="searchTest5"/>
-          <include name="searchTest11"/>
-          <include name="searchTest2"/>
+          <include name="testClickSuggestionNavigatesToPage"/>
+          <include name="testSearchButtonNoSuggestions"/>
+          <include name="testSearchButtonFirstSuggestion"/>
+          <include name="testNoBoldSuggestionsIfInvalidQuery"/>
         </methods>
       </class> <!-- org.wikitests.searchtests.SearchTest -->
     </classes>
