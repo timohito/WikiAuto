@@ -12,6 +12,7 @@
           <include name="testClickSuggestionNavigatesToPage"/>
           <include name="testSearchButtonNoSuggestions"/>
           <include name="testSearchButtonFirstSuggestion"/>
+          <include name="testSearchContainingPages"/>
           <include name="testNoBoldSuggestionsIfInvalidQuery"/>
         </methods>
       </class> <!-- org.wikitests.searchtests.SearchTest -->

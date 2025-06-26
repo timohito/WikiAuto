@@ -1,25 +1,22 @@
 package org.wikitests.searchtests;
 
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.wikiauto.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import org.wikiauto.DriverFactory;
 
 import java.util.List;
 
 public class SearchTest {
-    private BasePage basePage;
+    public BasePage basePage;
+    public WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        WebDriver localDriver = new ChromeDriver(options);
-        DriverFactory.setDriver(localDriver);
-        basePage = new BasePage(localDriver);
+        driver = new ChromeDriver();
+        basePage = new BasePage(driver);
     }
 
 
@@ -104,7 +101,7 @@ public class SearchTest {
 
     @AfterMethod
     public void tearDown() {
-        DriverFactory.quitDriver();
+        driver.quit();
     }
 }
 
