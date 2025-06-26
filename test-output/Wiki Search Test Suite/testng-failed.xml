@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="4" parallel="methods" name="Failed suite [Wiki Search Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="4" parallel="methods" name="Search Test(failed)" verbose="0">
+<suite thread-count="4" parallel="tests" name="Failed suite [Wiki Search Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="4" parallel="tests" name="Search Test(failed)" verbose="0">
     <classes>
       <class name="org.wikitests.searchtests.SearchTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testNoSuggestionsIfInvalidQuery"/>
           <include name="testBoldSuggestions"/>
           <include name="setUp"/>
           <include name="testClickSuggestionNavigatesToPage"/>
-          <include name="testSearchButtonNoSuggestions"/>
-          <include name="testSearchButtonFirstSuggestion"/>
           <include name="testSearchContainingPages"/>
-          <include name="testNoBoldSuggestionsIfInvalidQuery"/>
+          <include name="testSearchButtonFirstSuggestion"/>
         </methods>
       </class> <!-- org.wikitests.searchtests.SearchTest -->
     </classes>
