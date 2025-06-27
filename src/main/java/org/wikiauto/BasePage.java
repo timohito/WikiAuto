@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     protected WebDriver driver;
@@ -43,6 +44,7 @@ public class BasePage {
 
     public void clickSearchButton() {
         driver.findElement(searchButtonBy).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     public List<WebElement> getSuggestions() {

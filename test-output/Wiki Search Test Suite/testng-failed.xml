@@ -6,11 +6,8 @@
       <class name="org.wikitests.searchtests.SearchTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testBoldSuggestions"/>
           <include name="setUp"/>
-          <include name="testClickSuggestionNavigatesToPage"/>
-          <include name="testSearchContainingPages"/>
-          <include name="testSearchButtonFirstSuggestion"/>
+          <include name="testSearchButtonNoSuggestions"/>
         </methods>
       </class> <!-- org.wikitests.searchtests.SearchTest -->
     </classes>
