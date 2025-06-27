@@ -6,17 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.wikiauto.EntityPage;
+import org.wikiauto.SearchResultPage;
 
 import java.util.List;
 
 public class SearchTest {
     public BasePage basePage;
     public WebDriver driver;
+    public EntityPage entityPage;
+    public SearchResultPage searchResultPage;
 
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
         basePage = new BasePage(driver);
+        entityPage = new EntityPage(driver);
+        searchResultPage = new SearchResultPage(driver);
     }
 
 
@@ -68,7 +74,7 @@ public class SearchTest {
         basePage.enterQueryInSearchBox(query);
         basePage.getSuggestions().get(0).click(); //кликаем по первому саджесту
 
-        Assert.assertTrue(basePage.isCurrentPageMatchingQuery(query)); //убеждаемся что попали на верную страницу
+        Assert.assertTrue(entityPage.isCurrentPageMatchingQuery(query)); //убеждаемся что попали на верную страницу
     }
 
     @Test
@@ -78,7 +84,7 @@ public class SearchTest {
         basePage.enterQueryInSearchBox(query);
         basePage.clickSearchButton(); //кликаем по кнопке поиска
 
-        Assert.assertTrue(basePage.isCurrentPageMatchingQuery(query)); //убеждаемся что попали на верную страницу
+        Assert.assertTrue(entityPage.isCurrentPageMatchingQuery(query)); //убеждаемся что попали на верную страницу
     }
 
     @Test
@@ -88,7 +94,7 @@ public class SearchTest {
         basePage.enterQueryInSearchBox(query);
         basePage.clickSearchButton(); //клик на кнопку поиска
 
-        Assert.assertTrue(basePage.isCurrentPageASearchResultPage()); //убеждаемся что попали на страницу поиска
+        Assert.assertTrue(searchResultPage.isCurrentPageASearchResultPage()); //убеждаемся что попали на страницу поиска
     }
 
     @Test

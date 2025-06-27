@@ -16,8 +16,6 @@ public class BasePage {
     private By searchBoxBy = By.name("search");
     private By searchButtonBy = By.name("go");
     private By suggestionsResult = By.cssSelector(".suggestions-result");
-    private By redirectedFromSearch = By.cssSelector("#mw-content-subtitle > span");
-    private By heading = By.cssSelector("#firstHeading > span");
     private By searchPagesContainingTip = By.cssSelector("body > div.suggestions > a > div > div.special-label");
 
 
@@ -68,44 +66,13 @@ public class BasePage {
         return highlight.getText();
     }
 
-    public String getPageTitle() {
-        return driver.findElement(heading).getText();
-    }
-
-    public boolean isCurrentPageMatchingQuery(String query) {
-        query = query.toLowerCase().trim();
-        String pageTitle = getPageTitle().toLowerCase();
-
-        // Проверяем точное совпадение с заголовком страницы
-        if (pageTitle.equals(query)) {
-            return true;
-        }
-
-        // Пробуем найти текст о перенаправлении (если он есть)
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(redirectedFromSearch));
-            WebElement redirectNotice = driver.findElement(redirectedFromSearch);
-            String redirectText = redirectNotice.getText().toLowerCase();
-            if (redirectText.contains("перенаправлено с") && redirectText.contains(query)) {
-                return true;
-            }
-        }
-        catch (org.openqa.selenium.NoSuchElementException e) {}
-
-        return false;
-    }
-
-    public boolean isCurrentPageASearchResultPage() {
-        return driver.getCurrentUrl().contains("search=");
-    }
-
     public boolean searchPagesContainingTipExistsAndFunctions() {
+        SearchResultPage searchResPage = new SearchResultPage(driver);
         try {
             driver.findElement(searchPagesContainingTip).click();
         }
         catch (org.openqa.selenium.NoSuchElementException e) {}
 
-        return isCurrentPageASearchResultPage();
+        return searchResPage.isCurrentPageASearchResultPage();
     }
 }
