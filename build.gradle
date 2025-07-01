@@ -27,4 +27,10 @@ test {
         useDefaultListeners = true
         suites 'src/test/resources/testrunner/testng.xml'
     }
+
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "short"
+        showStandardStreams = true
+    }
 }

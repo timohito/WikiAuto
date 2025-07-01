@@ -2,92 +2,92 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-27T22:21:44 GMT+04:00" name="Wiki Search Test Suite" finished-at="2025-06-27T22:22:13 GMT+04:00" duration-ms="28841">
+  <suite started-at="2025-07-02T00:49:43 GMT+04:00" name="Wiki Search Test Suite" finished-at="2025-07-02T00:50:11 GMT+04:00" duration-ms="28026">
     <groups>
     </groups>
-    <test started-at="2025-06-27T22:21:44 GMT+04:00" name="Search Test" finished-at="2025-06-27T22:22:13 GMT+04:00" duration-ms="28841">
+    <test started-at="2025-07-02T00:49:43 GMT+04:00" name="Search Test" finished-at="2025-07-02T00:50:11 GMT+04:00" duration-ms="28026">
       <class name="org.wikitests.searchtests.SearchTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:44 GMT+04:00" name="setUp" finished-at="2025-06-27T22:21:45 GMT+04:00" duration-ms="828" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:43 GMT+04:00" name="setUp" finished-at="2025-07-02T00:49:44 GMT+04:00" duration-ms="819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testBoldSuggestions()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:45 GMT+04:00" name="testBoldSuggestions" finished-at="2025-06-27T22:21:47 GMT+04:00" duration-ms="1699" status="PASS">
+        <test-method signature="testBoldSuggestions()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:44 GMT+04:00" name="testBoldSuggestions" finished-at="2025-07-02T00:49:46 GMT+04:00" duration-ms="1654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBoldSuggestions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:47 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:21:47 GMT+04:00" duration-ms="82" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:46 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:49:46 GMT+04:00" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:47 GMT+04:00" name="setUp" finished-at="2025-06-27T22:21:47 GMT+04:00" duration-ms="573" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:46 GMT+04:00" name="setUp" finished-at="2025-07-02T00:49:46 GMT+04:00" duration-ms="589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testClickSuggestionNavigatesToPage()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:47 GMT+04:00" name="testClickSuggestionNavigatesToPage" finished-at="2025-06-27T22:21:50 GMT+04:00" duration-ms="2628" status="PASS">
+        <test-method signature="testClickSuggestionNavigatesToPage()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:46 GMT+04:00" name="testClickSuggestionNavigatesToPage" finished-at="2025-07-02T00:49:49 GMT+04:00" duration-ms="2358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickSuggestionNavigatesToPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:50 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:21:50 GMT+04:00" duration-ms="79" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:49 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:49:49 GMT+04:00" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:50 GMT+04:00" name="setUp" finished-at="2025-06-27T22:21:51 GMT+04:00" duration-ms="586" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:49 GMT+04:00" name="setUp" finished-at="2025-07-02T00:49:49 GMT+04:00" duration-ms="550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testNoBoldSuggestionsIfInvalidQuery()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:51 GMT+04:00" name="testNoBoldSuggestionsIfInvalidQuery" finished-at="2025-06-27T22:21:52 GMT+04:00" duration-ms="1705" status="PASS">
+        <test-method signature="testNoBoldSuggestionsIfInvalidQuery()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:49 GMT+04:00" name="testNoBoldSuggestionsIfInvalidQuery" finished-at="2025-07-02T00:49:51 GMT+04:00" duration-ms="1638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNoBoldSuggestionsIfInvalidQuery -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:52 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:21:52 GMT+04:00" duration-ms="71" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:51 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:49:51 GMT+04:00" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:52 GMT+04:00" name="setUp" finished-at="2025-06-27T22:21:53 GMT+04:00" duration-ms="575" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:51 GMT+04:00" name="setUp" finished-at="2025-07-02T00:49:52 GMT+04:00" duration-ms="528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testNoSuggestionsIfInvalidQuery()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:21:53 GMT+04:00" name="testNoSuggestionsIfInvalidQuery" finished-at="2025-06-27T22:22:04 GMT+04:00" duration-ms="11119" status="PASS">
+        <test-method signature="testNoSuggestionsIfInvalidQuery()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:49:52 GMT+04:00" name="testNoSuggestionsIfInvalidQuery" finished-at="2025-07-02T00:50:03 GMT+04:00" duration-ms="11083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNoSuggestionsIfInvalidQuery -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:04 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:22:04 GMT+04:00" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:03 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:50:03 GMT+04:00" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:04 GMT+04:00" name="setUp" finished-at="2025-06-27T22:22:05 GMT+04:00" duration-ms="580" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:03 GMT+04:00" name="setUp" finished-at="2025-07-02T00:50:03 GMT+04:00" duration-ms="537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSearchButtonFirstSuggestion()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:05 GMT+04:00" name="testSearchButtonFirstSuggestion" finished-at="2025-06-27T22:22:06 GMT+04:00" duration-ms="1705" status="PASS">
+        <test-method signature="testSearchButtonFirstSuggestion()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:03 GMT+04:00" name="testSearchButtonFirstSuggestion" finished-at="2025-07-02T00:50:05 GMT+04:00" duration-ms="1670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchButtonFirstSuggestion -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:06 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:22:06 GMT+04:00" duration-ms="75" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:05 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:50:05 GMT+04:00" duration-ms="82" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:06 GMT+04:00" name="setUp" finished-at="2025-06-27T22:22:07 GMT+04:00" duration-ms="579" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:05 GMT+04:00" name="setUp" finished-at="2025-07-02T00:50:06 GMT+04:00" duration-ms="547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSearchButtonNoSuggestions()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:07 GMT+04:00" name="testSearchButtonNoSuggestions" finished-at="2025-06-27T22:22:09 GMT+04:00" duration-ms="2053" status="PASS">
+        <test-method signature="testSearchButtonNoSuggestions()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:06 GMT+04:00" name="testSearchButtonNoSuggestions" finished-at="2025-07-02T00:50:08 GMT+04:00" duration-ms="2044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchButtonNoSuggestions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:09 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:22:09 GMT+04:00" duration-ms="74" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:08 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:50:08 GMT+04:00" duration-ms="73" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:09 GMT+04:00" name="setUp" finished-at="2025-06-27T22:22:10 GMT+04:00" duration-ms="566" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:08 GMT+04:00" name="setUp" finished-at="2025-07-02T00:50:08 GMT+04:00" duration-ms="600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSearchContainingPages()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:10 GMT+04:00" name="testSearchContainingPages" finished-at="2025-06-27T22:22:13 GMT+04:00" duration-ms="3046" status="PASS">
+        <test-method signature="testSearchContainingPages()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:08 GMT+04:00" name="testSearchContainingPages" finished-at="2025-07-02T00:50:11 GMT+04:00" duration-ms="2818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchContainingPages -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-06-27T22:22:13 GMT+04:00" name="tearDown" finished-at="2025-06-27T22:22:13 GMT+04:00" duration-ms="90" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.wikitests.searchtests.SearchTest@1f760b47]" started-at="2025-07-02T00:50:11 GMT+04:00" name="tearDown" finished-at="2025-07-02T00:50:11 GMT+04:00" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
