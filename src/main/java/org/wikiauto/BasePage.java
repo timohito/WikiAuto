@@ -29,8 +29,9 @@ public class BasePage {
     }
 
     public void enterQueryInSearchBox(String query) {
-        driver.findElement(searchBoxBy).clear();
-        driver.findElement(searchBoxBy).sendKeys(query);
+        WebElement searchBox = driver.findElement(searchBoxBy);
+        searchBox.clear();
+        searchBox.sendKeys(query);
     }
 
     public void enterQueryInSearchBoxSlowly(String query) throws InterruptedException {
