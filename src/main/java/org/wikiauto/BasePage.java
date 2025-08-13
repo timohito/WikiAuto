@@ -34,10 +34,10 @@ public class BasePage {
     }
 
     public void enterQueryInSearchBoxSlowly(String query) throws InterruptedException {
-        driver.findElement(searchBoxBy).clear();
-        char[] q = query.toCharArray();
-        for (char c : q) {
-            driver.findElement(searchBoxBy).sendKeys(String.valueOf(c));
+        WebElement searchBox = driver.findElement(searchBoxBy);
+        searchBox.clear();
+        for (char c : query.toCharArray()) {
+            searchBox.sendKeys(String.valueOf(c));
             Thread.sleep(200);
         }
     }
